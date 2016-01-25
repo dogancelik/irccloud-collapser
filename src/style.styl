@@ -1,0 +1,16 @@
+idPrefix = 'collapser'
+
+#{idPrefix}-enabled-label
+  font-weight normal
+
+#{idPrefix}-enabled-check:not(:checked) ~ #{idPrefix}-enabled-label
+  color red
+
+  &::after
+    content "Not enabled"
+
+#{idPrefix}-enabled-check:checked ~ #{idPrefix}-enabled-label
+  color green
+
+  &::after
+    content "Enabled"

@@ -1,0 +1,33 @@
+- var idPrefix = 'collapser';
+div(id=idPrefix+'-container', class='settingsContents settingsContents__'+idPrefix, data-section=idPrefix)
+  h2.settingsTitle
+    span Collapser&nbsp;
+    input(id=idPrefix+'-enabled-check', type='checkbox')
+    | &nbsp;
+    label(id=idPrefix+'-enabled-label', for=idPrefix+'-enabled-check')
+  p.explanation Double click on #[a(id=idPrefix+'-show-networks', href='javascript:void(0)') Networks] to show or hide their child items.
+
+  h3 Toggle options
+  table.checkboxForm
+    tr
+      td: input(id=idPrefix+'-collapse-active', type='checkbox')
+      th: label(for=idPrefix+'-collapse-active') &nbsp;Toggle Active Channels
+    tr
+      td: input(id=idPrefix+'-collapse-inactive', type='checkbox')
+      th: label(for=idPrefix+'-collapse-inactive') &nbsp;Toggle Inactive Channels
+    tr
+      td: input(id=idPrefix+'-collapse-convo', type='checkbox')
+      th: label(for=idPrefix+'-collapse-convo') &nbsp;Toggle Conversations
+    tr
+      td: input(id=idPrefix+'-collapse-archive', type='checkbox')
+      th: label(for=idPrefix+'-collapse-archive') &nbsp;Toggle Archives
+
+  hr
+  p.explanation: b
+    | If you like this script, please&nbsp;
+    a(href='https://dogancelik.com/donate.html', target='_blank') consider a donation
+  p.explanation
+    - var urlBase = 'https://github.com/dogancelik/irccloud-collapser';
+    a(href=urlBase, target='_blank') Source code
+    | &nbsp;-&nbsp;
+    a(href=urlBase+'/issues', target='_blank') Report bug / Request feature
